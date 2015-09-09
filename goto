@@ -1,0 +1,25 @@
+#!/bin/sh
+if [ $# -eq 0 ] || [ $# -ge 2 ]
+then
+    echo "[Usage]: . goto <destination>"
+    exit
+fi
+
+case $1 in
+    server)
+        cd /c/Users/Liang/workspace/TeamieServer 
+        ;;
+    schduler)
+        cd /c/Users/Liang/workspace/TeamieScheduler
+        ;;
+    workspace)
+        cd /c/Users/Liang/workspace
+        ;;
+    liang)
+        cd /c/Users/Liang
+        ;;
+    *)
+        echo "Wrong destination"
+        exit
+        ;;
+esac

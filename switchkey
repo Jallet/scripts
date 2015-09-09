@@ -1,0 +1,30 @@
+#!/bin/sh
+if [ $# -eq 0 ] || [ $# -gt 1 ]
+then
+    echo "[Usage]: switchkey <key_name>"
+    exit
+fi
+
+echo "starting ssh-agent..."
+eval `ssh-agent -s`
+
+case $1 in
+    bitbucket)
+        key="/c/Users/Liang/.ssh/bit_bucket_teamie_id_rsa"
+        ;;
+    teamieserver)
+        key="/c/Users/Liang/.ssh/TeamieServer_id_rsa"
+        ;;
+    mygithub)
+        key="/c/Users/Liang/.ssh/myGithub"
+        ;;
+    *)
+        echo "Wrong key"
+        echo "Exiting..."
+        exit
+        ;;
+esac
+ssh-add -D
+ssh-add $key
+ssh-add -l
+
