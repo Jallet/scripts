@@ -6,20 +6,28 @@ then
 fi
 
 case $1 in
-    server)
-        cd /c/Users/Liang/workspace/TeamieServer 
+    dltb)
+        cd /home/jiangliang/code/DeepLearnToolbox
         ;;
-    schduler)
-        cd /c/Users/Liang/workspace/TeamieScheduler
+    sc)
+        cd /home/jiangliang/code/semantic-colorization
         ;;
-    workspace)
-        cd /c/Users/Liang/workspace
+    flickr8)
+        cd /home/jiangliang/datasets/flickr8k
         ;;
-    liang)
-        cd /c/Users/Liang
+    scripts)
+        cd /home/jiangliang/code/scripts
+        ;;
+    ck)
+        cd /home/jiangliang/code/colorization-keras
+        ;;
+    ck1)
+        cd /home/jiangliang/code/colorization-keras-1
+        ;;
+    pylib)
+        cd /home/jiangliang/software/python2.7.5/lib/python2.7/site-packages
         ;;
     *)
         echo "Wrong destination"
-        exit
         ;;
 esac
