@@ -6,17 +6,11 @@ then
 fi
 
 case $1 in
-    server)
-        cd /c/Users/Liang/workspace/TeamieServer 
+    ck)
+        cd /home/curio/code/colorization-keras
         ;;
-    schduler)
-        cd /c/Users/Liang/workspace/TeamieScheduler
-        ;;
-    workspace)
-        cd /c/Users/Liang/workspace
-        ;;
-    liang)
-        cd /c/Users/Liang
+    ck1)
+        cd /home/curio/code/colorization-keras-1
         ;;
     *)
         echo "Wrong destination"
