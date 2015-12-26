@@ -15,4 +15,4 @@ else
 fi
 
 curl -u $user:$password https://api.github.com/user/repos -d {\"name\":\"$repo_name\"}
-
+echo "Succeeded creating repository $repo_name!"
