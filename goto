@@ -12,8 +12,28 @@ case $1 in
     ck1)
         cd /home/curio/code/colorization-keras-1
         ;;
+    dltb)
+        cd /home/jiangliang/code/DeepLearnToolbox
+        ;;
+    sc)
+        cd /home/jiangliang/code/semantic-colorization
+        ;;
+    flickr8)
+        cd /home/jiangliang/datasets/flickr8k
+        ;;
+    scripts)
+        cd /home/jiangliang/code/scripts
+        ;;
+    ck)
+        cd /home/jiangliang/code/colorization-keras
+        ;;
+    ck1)
+        cd /home/jiangliang/code/colorization-keras-1
+        ;;
+    pylib)
+        cd /home/jiangliang/software/python2.7.5/lib/python2.7/site-packages
+        ;;
     *)
         echo "Wrong destination"
-        exit
         ;;
 esac
