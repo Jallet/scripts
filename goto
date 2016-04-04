@@ -6,32 +6,14 @@ then
 fi
 
 case $1 in
-    ck)
-        cd /home/curio/code/colorization-keras
+    cc)
+        cd /home/liangjiang/code/caffe_colorization
         ;;
-    ck1)
-        cd /home/curio/code/colorization-keras-1
+    c)
+        cd /home/liangjiang/code/caffe
         ;;
-    dltb)
-        cd /home/jiangliang/code/DeepLearnToolbox
-        ;;
-    sc)
-        cd /home/jiangliang/code/semantic-colorization
-        ;;
-    flickr8)
-        cd /home/jiangliang/datasets/flickr8k
-        ;;
-    scripts)
-        cd /home/jiangliang/code/scripts
-        ;;
-    ck)
-        cd /home/jiangliang/code/colorization-keras
-        ;;
-    ck1)
-        cd /home/jiangliang/code/colorization-keras-1
-        ;;
-    pylib)
-        cd /home/jiangliang/software/python2.7.5/lib/python2.7/site-packages
+    rn)
+        cd /home/liangjiang/code/residual_network
         ;;
     *)
         echo "Wrong destination"
