@@ -17,6 +17,7 @@ def main():
     args = ap.parse_args()
     config = args.config
 
+    subprocess.Popen("date", shell = True)
     #parse configurations from file
     cp = ConfigParser.ConfigParser()
     cp.read(config)
@@ -48,14 +49,8 @@ def main():
         child = subprocess.Popen("cd " + path + " && eval `ssh-agent -s` && ssh-add " 
                 + key + " && git pull", shell = True)
         child.wait()
-        child = subprocess.Popen("echo " + path 
-                + "pull >> /home/liangjiang/code/scripts/out", shell = True)
-        child.wait()
         child = subprocess.Popen("cd " + path + " && eval `ssh-agent -s` && ssh-add " 
                 + key + " && git push", shell = True)
-        child.wait()
-        child = subprocess.Popen("echo " + path 
-                + "push >> /home/liangjiang/code/scripts/out", shell = True)
         child.wait()
 
 if __name__ == "__main__":
