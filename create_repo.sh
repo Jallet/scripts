@@ -5,8 +5,6 @@ then
     exit
 elif [ $# -eq 1 ]
 then
-    user=Jallet
-    password=*yT.h@:7{j
     repo_name=$1
 else
     user=$1
