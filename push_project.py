@@ -3,6 +3,8 @@ import ConfigParser
 import argparse
 import os
 import subprocess
+import json
+import sys
 
 def argparser():
     parser = argparse.ArgumentParser()
@@ -19,19 +21,38 @@ def main():
     cp = ConfigParser.ConfigParser()
     cp.read(config)
     secs = cp.sections()
-    for sec in secs:
-        try:
-            path = cp.get(sec, "path")
-        except ConfigParser.NoOptionError:
-            continue
-        
-        os.chdir(path)
-        child = subprocess.Popen("git pull", shell = True)
+    key = ""
+    try:
+        key = cp.get("key", "key")
+    except ConfigParser.NoSectionError:
+        print "no key section"
+        sys.exit()
+    except ConfigParser.NoOptionError:
+        print "no key option in key section"
+        sys.exit()
+
+    path = ""
+    path_json = ""
+    try:
+        path_json = cp.get("project", "path")
+    except ConfigParser.NoSectionError:
+        print "no project section"
+        sys.exit()
+    except ConfigParser.NoOptionError:
+        print "no path option in project section"
+        sys.exit()
+    
+    pathes = json.loads(path_json)
+
+    for path in pathes:
+        child = subprocess.Popen("cd " + path + " && eval `ssh-agent -s` && ssh-add " 
+                + key + " && git pull", shell = True)
         child.wait()
         child = subprocess.Popen("echo " + path 
                 + "pull >> /home/liangjiang/code/scripts/out", shell = True)
         child.wait()
-        child = subprocess.Popen("git push", shell = True)
+        child = subprocess.Popen("cd " + path + " && eval `ssh-agent -s` && ssh-add " 
+                + key + " && git push", shell = True)
         child.wait()
         child = subprocess.Popen("echo " + path 
                 + "push >> /home/liangjiang/code/scripts/out", shell = True)
