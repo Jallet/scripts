@@ -6,6 +6,7 @@ then
 fi
 
 case $1 in
+    # add destinations by yourself
     cc)
         cd /home/liangjiang/code/caffe_colorization
         ;;
