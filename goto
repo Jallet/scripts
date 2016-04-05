@@ -19,6 +19,9 @@ case $1 in
     drn)
         cd /home/liangjiang/code/deep-residual-networks
         ;;
+    s)
+        cd /home/liangjiang/code/scripts/
+        ;;
     old)
         ssh jiangliang@172.16.46.3
         ;;
