@@ -15,6 +15,12 @@ case $1 in
     rn)
         cd /home/liangjiang/code/residual_network
         ;;
+    drn)
+        cd /home/liangjiang/code/deep-residual-networks
+        ;;
+    old)
+        ssh jiangliang@172.16.46.3
+        ;;
     *)
         echo "Wrong destination"
         ;;
