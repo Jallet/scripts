@@ -20,13 +20,19 @@ def main():
     cp.read(config)
     secs = cp.sections()
     for sec in secs:
-        path = cp.get(sec, "path")
+        try:
+            path = cp.get(sec, "path")
+        except ConfigParser.NoOptionError:
+            continue
+        
         os.chdir(path)
         child = subprocess.Popen("git pull", shell = True)
         child.wait()
         child = subprocess.Popen("echo " + path 
                 + "pull >> /home/liangjiang/code/scripts/out", shell = True)
+        child.wait()
         child = subprocess.Popen("git push", shell = True)
+        child.wait()
         child = subprocess.Popen("echo " + path 
                 + "push >> /home/liangjiang/code/scripts/out", shell = True)
         child.wait()
