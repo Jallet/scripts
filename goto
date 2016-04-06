@@ -6,20 +6,16 @@ then
 fi
 
 case $1 in
-    server)
-        cd /c/Users/Liang/workspace/TeamieServer 
-        ;;
-    schduler)
-        cd /c/Users/Liang/workspace/TeamieScheduler
-        ;;
-    workspace)
-        cd /c/Users/Liang/workspace
+    ahk)
+        cd /d/software/AHK_scripts
         ;;
     liang)
         cd /c/Users/Liang
         ;;
+    software)
+        cd /d/software
+        ;;
     *)
         echo "Wrong destination"
-        exit
         ;;
 esac
