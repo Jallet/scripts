@@ -10,12 +10,10 @@ eval `ssh-agent -s`
 
 case $1 in
     mygithub)
-        key="/c/Users/Liang/.ssh/myGithub"
+        key="/home/jiangliang/.ssh/mygithub"
         ;;
     *)
         echo "Wrong key"
-        echo "Exiting..."
-        exit
         ;;
 esac
 ssh-add -D

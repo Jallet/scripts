@@ -6,6 +6,7 @@ then
 fi
 
 case $1 in
+    # add destinations by yourself
     ahk)
         cd /d/software/AHK_scripts
         ;;
