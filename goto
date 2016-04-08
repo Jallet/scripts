@@ -22,6 +22,9 @@ case $1 in
     s)
         cd /home/liangjiang/code/scripts/
         ;;
+    pylib)
+        cd /usr/local/lib/python2.7/dist-packages
+        ;;
     old)
         ssh jiangliang@172.16.46.3
         ;;
