@@ -10,7 +10,7 @@ eval `ssh-agent -s`
 
 case $1 in
     mygithub)
-        key="/home/jiangliang/.ssh/mygithub"
+        key="/home/Liang Jiang/.ssh/mygithub"
         ;;
     *)
         echo "Wrong key"
