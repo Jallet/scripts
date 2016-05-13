@@ -14,7 +14,7 @@ case $1 in
         cd /home/liangjiang/code/caffe
         ;;
     rn)
-        cd /home/liangjiang/code/residual_network
+        cd /home/liangjiang/code/residual_network-new
         ;;
     drn)
         cd /home/liangjiang/code/deep-residual-networks
