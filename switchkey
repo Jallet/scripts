@@ -13,7 +13,7 @@ case $1 in
         key="/home/liangjiang/.ssh/mygithub"
         ;;
     coding.net)
-        key='/home/liangjiang/.ssh/coding.net'
+        key="/home/liangjiang/.ssh/coding.net"
         ;;
     *)
         echo "Wrong key"
