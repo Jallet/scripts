@@ -12,6 +12,9 @@ case $1 in
     mygithub)
         key="/home/liangjiang/.ssh/mygithub"
         ;;
+    coding.net)
+        key='/home/liangjiang/.ssh/coding.net'
+        ;;
     *)
         echo "Wrong key"
         ;;
