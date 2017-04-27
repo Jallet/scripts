@@ -8,17 +8,7 @@ fi
 echo "starting ssh-agent..."
 eval `ssh-agent -s`
 
-case $1 in
-    mygithub)
-        key="/home/liangjiang/.ssh/mygithub"
-        ;;
-    coding.net)
-        key="/home/liangjiang/.ssh/coding.net"
-        ;;
-    *)
-        echo "Wrong key"
-        ;;
-esac
+key="/home/liangliang/.ssh/"$1
 ssh-add -D
 ssh-add $key
 ssh-add -l
